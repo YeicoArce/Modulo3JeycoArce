@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "d3e6e910-b5b9-4309-9a03-988fc707fc85",
+		"name": "ProyectoJeycoArce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e8b24e13-dae9-436f-a37d-1f91e4f58933",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-coffee-testing.herokuapp.com/v1/examen/status?",
+					"protocol": "https",
+					"host": [
+						"api-coffee-testing",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"examen",
+						"status"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "randomName",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a17a0e32-71ec-4639-bbba-76318884482d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "testpass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "testuser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-coffee-testing.herokuapp.com/v1/examen/randomName",
+					"protocol": "https",
+					"host": [
+						"api-coffee-testing",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"examen",
+						"randomName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sameName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Edge\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-coffee-testing.herokuapp.com/v1/examen/sameName",
+					"protocol": "https",
+					"host": [
+						"api-coffee-testing",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"examen",
+						"sameName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putName",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b36fd62a-9646-4e99-9578-b1ff362c3ac5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"La Roca\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-coffee-testing.herokuapp.com/v1/examen/updateName",
+					"protocol": "https",
+					"host": [
+						"api-coffee-testing",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"examen",
+						"updateName"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
