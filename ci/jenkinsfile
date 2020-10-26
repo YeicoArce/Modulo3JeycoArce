@@ -1,7 +1,7 @@
 pipeline {
     agente any
     stages {
-        stages('Newman test') {
+        @stages('Newman test') {
             steps {
                 sh '''
                 node --version
@@ -10,7 +10,7 @@ pipeline {
                 '''
             }
         }
-        stages('RestAssured test') {
+        @stages('RestAssured test') {
             steps {
                 sh '''
                 cd Modulo3JeycoArce/RestAssured
