@@ -10,7 +10,7 @@ pipeline {
                 '''
             }
         }
-        @stages('RestAssured test') {
+        environment('RestAssured test') {
             steps {
                 sh '''
                 cd Modulo3JeycoArce/RestAssured
