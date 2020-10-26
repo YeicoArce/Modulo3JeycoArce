@@ -14,7 +14,7 @@ pipeline {
             steps {
                 sh '''
                 cd Modulo3JeycoArce/RestAssured
-                mvn clean test 
+                mvn clean install 
                 '''
             }
         }
