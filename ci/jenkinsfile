@@ -11,7 +11,14 @@ pipeline {
                 '''
             }
         }
-        
+        stage('RestAssured test pipeline') {
+            steps {
+                sh '''
+                cd RestAssured
+                mvn clean install 
+                '''
+            }
+        }
        
     }
 }
