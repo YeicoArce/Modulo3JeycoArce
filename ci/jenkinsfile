@@ -10,7 +10,7 @@ pipeline {
                 '''
             }
         }
-        stage('RestAssured test') {
+        stage('RestAssured test pipeline') {
             steps {
                 sh '''
                 cd RestAssured
