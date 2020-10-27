@@ -4,6 +4,7 @@ pipeline {
         stage('Newman test') {
             steps {
                 sh '''
+                --debug
                 node --version
                 cd Modulo3JeycoArce/ci
                 newman run ProyectoJeycoArce.postman_collection.json 
