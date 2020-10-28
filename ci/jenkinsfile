@@ -15,7 +15,7 @@ pipeline {
             steps {
                 //git url: 'https://github.com/YeicoArce/Modulo3JeycoArce'
                 //withMaven {
-                    maven: 'maven-3', // (1)
+                    maven: 'maven3.6.3', // (1)
                     mavenLocalRepo: '.apache-maven-3.6.3', // (2)
                     //mavenSettingsConfig: 'my-maven-settings' // (3)
                     bat "cd RestAssured"
