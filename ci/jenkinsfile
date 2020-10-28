@@ -8,6 +8,8 @@ pipeline {
                 npm install -g newman
                 cd Modulo3JeycoArce/ci
                 newman run ProyectoJeycoArce.postman_collection.json 
+                cd..
+                cd..
                 '''
             }
         }
@@ -17,6 +19,8 @@ pipeline {
                 bat '''
                 cd Modulo3JeycoArce/RestAssured/examen
                 mvn clean install 
+                cd..
+                cd..
                 '''
             }
         }
