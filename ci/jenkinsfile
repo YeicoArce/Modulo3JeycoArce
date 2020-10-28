@@ -19,14 +19,7 @@ pipeline {
                 } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
             }
         }
-        stage('RestAssured test pipeline') {
-            steps {
-                bat '''
-                cd RestAssured
-                mvn clean install 
-                '''
-            }
-        }
+        
        
     }
 }
