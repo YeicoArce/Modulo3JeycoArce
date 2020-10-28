@@ -4,8 +4,8 @@ pipeline {
         stage('Newman test') {
             steps {
                 bat '''
-                bat npm install -g newman
                 node --version
+                npm install -g newman
                 cd Modulo3JeycoArce/ci
                 newman run ProyectoJeycoArce.postman_collection.json 
                 '''
