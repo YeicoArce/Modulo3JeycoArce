@@ -15,7 +15,7 @@ pipeline {
         stage('RestAssured test pipeline') {
             steps {
                 bat '''
-                cd Modulo3JeycoArce/RestAssured
+                cd Modulo3JeycoArce/RestAssured/examen
                 mvn clean install 
                 '''
             }
