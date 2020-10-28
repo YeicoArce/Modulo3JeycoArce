@@ -6,6 +6,7 @@ pipeline {
                 bat '''
                 node --version
                 cd Modulo3JeycoArce/ci
+                bat npm install -g newman
                 newman run ProyectoJeycoArce.postman_collection.json 
                 '''
             }
