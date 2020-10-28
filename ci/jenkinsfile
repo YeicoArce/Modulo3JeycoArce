@@ -12,10 +12,12 @@ pipeline {
             }
         }
         stage ('RestAssured con maven') {
-            git url: 'https://github.com/YeicoArce/Modulo3JeycoArce/tree/main/RestAssured'
-            withMaven {
-            bat "mvn clean verify"
-            } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
+            steps {
+                git url: 'https://github.com/YeicoArce/Modulo3JeycoArce/tree/main/RestAssured'
+                withMaven {
+                bat "mvn clean verify"
+                } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
+            }
         }
         stage('RestAssured test pipeline') {
             steps {
