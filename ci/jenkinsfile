@@ -14,7 +14,7 @@ pipeline {
         stage ('RestAssured con maven') {
             steps {
                 //git url: 'https://github.com/YeicoArce/Modulo3JeycoArce'
-                withMaven {
+                maven {
                     //maven: 'maven3.6.3', // (1)
                     //mavenLocalRepo: '.apache-maven-3.6.3', // (2)
                     //mavenSettingsConfig: 'my-maven-settings' // (3)
