@@ -15,6 +15,9 @@ pipeline {
             steps {
                 //git url: 'https://github.com/YeicoArce/Modulo3JeycoArce'
                 //withMaven {
+                    maven: 'maven-3', // (1)
+                    mavenLocalRepo: '.apache-maven-3.6.3', // (2)
+                    //mavenSettingsConfig: 'my-maven-settings' // (3)
                     bat "cd RestAssured"
                     bat "mvn clean verify"
                 //} // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
