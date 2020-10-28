@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Newman test') {
             steps {
-                sh '''
+                bat '''
                 --debug
                 node --version
                 cd Modulo3JeycoArce/ci
@@ -13,7 +13,7 @@ pipeline {
         }
         stage('RestAssured test pipeline') {
             steps {
-                sh '''
+                bat '''
                 cd RestAssured
                 mvn clean install 
                 '''
