@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Newman test') {
             steps {
-                bat '''
+                sh '''
                 node --version
                 newman run ProyectoJeycoArce.postman_collection.json -e ambiente_examen.postman_environment.json
                 '''
@@ -12,7 +12,7 @@ pipeline {
 
         stage('RestAssured test pipeline') {
             steps {
-                bat '''
+                sh '''
                 cd RestAssured
                 mvn clean test 
                 '''
@@ -21,7 +21,7 @@ pipeline {
 
         stage('Jmeter test pipeline') {
             steps {
-                bat '''
+                sh '''
                 cd LoadTest
                 export PATH=/home/pjcalvov/jmeter/apache-jmeter-5.3/bin:$PATH
                 jmeter -n -t examenjeycoarce.jmx 
