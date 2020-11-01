@@ -5,11 +5,7 @@ pipeline {
             steps {
                 sh '''
                 node --version
-                npm install -g newman
-                cd Modulo3JeycoArce/ci
                 newman run ProyectoJeycoArce.postman_collection.json -e ambiente_examen.postman_environment.json
-                cd..
-                cd..
                 '''
             }
         }
