@@ -9,6 +9,15 @@ pipeline {
                 '''
             }
         }
+
+        stage('RestAssured test pipeline') {
+            steps {
+                bat '''
+                cd Modulo3JeycoArce/RestAssured
+                mvn clean install 
+                '''
+            }
+        }
        
     }
 }
