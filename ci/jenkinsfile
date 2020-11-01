@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Newman test') {
             steps {
-                bat '''
+                sh '''
                 node --version
                 npm install -g newman
                 cd Modulo3JeycoArce/ci
