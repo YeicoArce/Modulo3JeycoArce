@@ -5,10 +5,8 @@ pipeline {
             steps {
                 bat '''
                 node --version
-                cd Modulo3JeycoArce/ci
-                newman run ProyectoJeycoArce.postman_collection.json 
-                cd..
-                cd..
+                cd Modulo3JeycoArce
+                newman run ProyectoJeycoArce.postman_collection.json -e ambiente_examen.postman_environment.json
                 '''
             }
         }
@@ -16,9 +14,8 @@ pipeline {
         stage('RestAssured test pipeline') {
             steps {
                 bat '''
-                cd Modulo3JeycoArce/RestAssured
-                mvn clean install 
-                cd..
+                cd RestAssured
+                mvn clean test 
                 cd..
                 '''
             }
@@ -27,7 +24,7 @@ pipeline {
         stage('Jmeter test pipeline') {
             steps {
                 bat '''
-                cd Modulo3JeycoArce/LoadTest
+                cd LoadTest
                 jmeter -n -t examenjeycoarce.jmx 
                 cd..
                 '''
