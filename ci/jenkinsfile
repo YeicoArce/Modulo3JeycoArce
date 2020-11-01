@@ -22,7 +22,6 @@ pipeline {
         stage('Jmeter test pipeline') {
             steps {
                 sh '''
-                cd..
                 cd LoadTest
                 export PATH=/home/pjcalvov/jmeter/apache-jmeter-5.3/bin:$PATH
                 jmeter -n -t examenjeycoarce.jmx 
