@@ -24,6 +24,16 @@ pipeline {
                 '''
             }
         }
+
+        stage('Jmeter test pipeline') {
+            steps {
+                bat '''
+                cd Modulo3JeycoArce/LoadTest
+                jmeter -n -t examenjeycoarce.jmx 
+                cd..
+                '''
+            }
+        }
        
     }
 }
