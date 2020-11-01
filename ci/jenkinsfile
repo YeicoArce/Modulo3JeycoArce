@@ -5,7 +5,6 @@ pipeline {
             steps {
                 bat '''
                 node --version
-                npm install -g newman
                 cd Modulo3JeycoArce/ci
                 newman run ProyectoJeycoArce.postman_collection.json 
                 cd..
@@ -17,7 +16,7 @@ pipeline {
         stage('RestAssured test pipeline') {
             steps {
                 bat '''
-                cd Modulo3JeycoArce/RestAssured/examen
+                cd Modulo3JeycoArce/RestAssured
                 mvn clean install 
                 cd..
                 cd..
