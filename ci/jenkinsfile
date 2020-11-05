@@ -29,7 +29,17 @@ pipeline {
             }
         }
            
-        
+        stage('Correos') {
+            steps {
+                    echo "Envio de email"
+                }
+            }
+        post {
+            always {
+                emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+                
+        }
+     }
       
     }
 }
