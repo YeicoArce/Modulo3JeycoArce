@@ -29,13 +29,14 @@ pipeline {
             }
         }
            
-    
+    agent any
+        stages {
         stage('Correos') {
             steps {
                     echo "Envio de email"
                 }
             }
-        
+        }
         post {
             always {
                 emailext body: 'Correo de prueba', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Pruebas'
